@@ -11,12 +11,12 @@
 
   <url type="website">http://octomap.github.io</url>
   <url type="bugtracker">https://github.com/OctoMap/octomap/issues</url>
-  
-  <run_depend>catkin</run_depend>
+
+  <run_depend>ament_cmake</run_depend>
   <buildtool_depend>cmake</buildtool_depend>
-  
+
   <export>
     <build_type>cmake</build_type>
   </export>
-  
+
 </package>
