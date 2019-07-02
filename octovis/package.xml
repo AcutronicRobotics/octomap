@@ -6,6 +6,7 @@
 
   <author email="wurm@informatik.uni-freiburg.de">Kai M. Wurm</author>
   <author email="armin@hornung.io">Armin Hornung</author>
+  <maintainer email="anasarrak@erlerobotics.com">Anas M'chichou</maintainer>
   <maintainer email="armin@hornung.io">Armin Hornung</maintainer>
   <maintainer email="anasarrak@erlerobotics.com">Anas M'chichou</maintainer>
   <license>GPLv2</license>
@@ -15,7 +16,7 @@
 
 
   <buildtool_depend>ament_cmake</buildtool_depend>
-
+  
   <depend>octomap</depend>
   <depend>libqglviewer-qt4-dev</depend>
   <depend>libqt4-dev</depend>

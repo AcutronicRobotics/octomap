@@ -1,5 +1,12 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.8)
-PROJECT(dynamicEDT3D)
+cmake_minimum_required(VERSION 3.5)
+PROJECT( dynamicEDT3D )
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra)
+endif()
 
 include(CTest)
 
@@ -83,7 +90,7 @@ install(FILES package.xml DESTINATION share/dynamic_edt_3d)
 # Export the package for use from the build-tree
 # (this registers the build-tree with a global CMake-registry)
 export(PACKAGE dynamicEDT3D)
- 
+
 # Create a dynamicEDT3DConfig.cmake file for the use from the build tree
 set(DYNAMICEDT3D_INCLUDE_DIRS "${INCLUDE_DIRS}")
 set(DYNAMICEDT3D_LIB_DIR "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}")
@@ -117,7 +124,7 @@ WRITE_BASIC_PACKAGE_VERSION_FILE(
 #install(EXPORT FooBarLibraryDepends DESTINATION
 #  "${INSTALL_DATA_DIR}/FooBar/CMake"
 #  COMPONENT dev)
- 
+
 # Create a dynamicEDT3DConfig.cmake file for the use from the install tree
 # and install it
 set(DYNAMICEDT3D_INCLUDE_DIRS "${CMAKE_INSTALL_PREFIX}/include")
@@ -140,7 +147,7 @@ WRITE_BASIC_PACKAGE_VERSION_FILE(
 
 install(FILES
   "${PROJECT_BINARY_DIR}/InstallFiles/dynamicEDT3DConfig.cmake"
-  "${PROJECT_BINARY_DIR}/InstallFiles/dynamicEDT3DConfig-version.cmake" 
+  "${PROJECT_BINARY_DIR}/InstallFiles/dynamicEDT3DConfig-version.cmake"
   DESTINATION share/dynamicEDT3D/)
 
 # Write pkgconfig-file:
@@ -152,7 +159,7 @@ install_pkg_config_file(dynamicEDT3D
     VERSION ${DYNAMICEDT3D_VERSION})
 
 
-# Documentation 
+# Documentation
 FIND_PACKAGE(Doxygen)
 IF(DOXYGEN_FOUND)
   ADD_CUSTOM_TARGET(docs_dynamicEDT3D ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/dynamicEDT3D.dox
