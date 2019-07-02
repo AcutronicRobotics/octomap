@@ -68,7 +68,7 @@ install(FILES ${octomap_HDRS}	DESTINATION include/octomap)
 file(GLOB octomap_math_HDRS ${PROJECT_SOURCE_DIR}/include/octomap/math/*.h)
 install(FILES ${octomap_math_HDRS}	DESTINATION include/octomap/math)
 
-# Install catkin package.xml
+# Install ament package.xml
 install(FILES package.xml DESTINATION share/octomap)
 
 # uninstall target

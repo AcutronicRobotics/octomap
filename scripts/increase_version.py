@@ -4,7 +4,7 @@
 # subfolders. The first argument specifies the version increase:
 # major, minor, or patch (default, e.g. 1.6.2 --> 1.6.3)
 #
-# Borrows heaviliy from ROS / catkin release tools
+# Borrows heaviliy from ROS / ament release tools
 
 
 import re
@@ -64,7 +64,7 @@ if __name__ == '__main__':
       exit(-1)
 
   print "OctoMap component versions found: %d.%d.%d" % tuple(versions[0])
-  # "bump version" from catkin:
+  # "bump version" from ament:
   # find the desired index
   idx = dict(major=0, minor=1, patch=2)[bump]
   # increment the desired part
