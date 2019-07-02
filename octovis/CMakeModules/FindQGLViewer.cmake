@@ -18,12 +18,13 @@ FIND_PATH( QGLVIEWER_BASE_DIR qglviewer.h
 
 FIND_PATH( QGLViewer_INCLUDE_DIR qglviewer.h
     /usr/include/qglviewer-qt4
+    /usr/include/qglviewer-qt5
     /usr/include/QGLViewer
     /opt/local/include/QGLViewer
     ${QGLVIEWER_BASE_DIR}
 )
 
-FIND_LIBRARY( QGLViewer_LIBRARY_DIR_UBUNTU NAMES qglviewer-qt4 QGLViewer-qt4)
+FIND_LIBRARY( QGLViewer_LIBRARY_DIR_UBUNTU NAMES qglviewer-qt4 QGLViewer-qt4 qglviewer-qt5 QGLViewer-qt5)
 FIND_LIBRARY( QGLViewer_LIBRARY_DIR_WINDOWS QGLViewer2 ${QGLVIEWER_BASE_DIR})
 FIND_LIBRARY( QGLViewer_LIBRARY_DIR_OTHER QGLViewer ${QGLVIEWER_BASE_DIR})
 
