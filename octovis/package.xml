@@ -6,6 +6,7 @@
 
   <author email="wurm@informatik.uni-freiburg.de">Kai M. Wurm</author>
   <author email="armin@hornung.io">Armin Hornung</author>
+  <maintainer email="anasarrak@erlerobotics.com">Anas M'chichou</maintainer>
   <maintainer email="armin@hornung.io">Armin Hornung</maintainer>
   <license>GPLv2</license>
 
@@ -14,15 +15,10 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <build_depend>octomap</build_depend>
-  <build_depend>libqglviewer-qt4-dev</build_depend>
-  <build_depend>libqt4-dev</build_depend>
-  <build_depend>libqt4-opengl-dev</build_depend>
-
-  <exec_depend>octomap</exec_depend>
-  <exec_depend>libqglviewer-qt4</exec_depend>
-  <exec_depend>libqtgui4</exec_depend>
-  <exec_depend>libqt4-opengl</exec_depend>
+  <depend>octomap</depend>
+  <depend>libqglviewer-qt4-dev</depend>
+  <depend>libqt4-dev</depend>
+  <depend>libqt4-opengl-dev</depend>
 
   <export>
     <build_type>ament_cmake</build_type>

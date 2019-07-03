@@ -153,7 +153,7 @@ IF(BUILD_VIEWER)
   file(GLOB octovis_HDRS  *.h *.hxx *.hpp)
   install(FILES ${octovis_HDRS} DESTINATION include/octovis)
 
-  # Install catkin package.xml
+  # Install ament package.xml
   install(FILES package.xml DESTINATION share/octovis)
 
 ELSE()

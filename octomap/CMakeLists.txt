@@ -1,4 +1,5 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+
 PROJECT( octomap )
 
 include(CTest)
@@ -68,7 +69,7 @@ install(FILES ${octomap_HDRS}	DESTINATION include/octomap)
 file(GLOB octomap_math_HDRS ${PROJECT_SOURCE_DIR}/include/octomap/math/*.h)
 install(FILES ${octomap_math_HDRS}	DESTINATION include/octomap/math)
 
-# Install catkin package.xml
+# Install ament package.xml
 install(FILES package.xml DESTINATION share/octomap)
 
 # uninstall target
@@ -77,8 +78,8 @@ configure_file(
     "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
     IMMEDIATE @ONLY)
 
-add_custom_target(uninstall
-    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
+# add_custom_target(uninstall
+#     COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
 
 # Export the package for use from the build-tree
 # (this registers the build-tree with a global CMake-registry)

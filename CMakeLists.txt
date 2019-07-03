@@ -1,10 +1,10 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
-PROJECT( octomap-distribution )
+cmake_minimum_required(VERSION 3.5)
+PROJECT( octomap )
 
 ENABLE_TESTING()  # enable CTest environment of subprojects
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)  # enables -fPIC in applicable compilers (required to avoid link errors in some cases)
 
-option(BUILD_OCTOVIS_SUBPROJECT "Build targets from subproject octovis" ON)
+option(BUILD_OCTOVIS_SUBPROJECT "Build targets from subproject octovis" on)
 option(BUILD_DYNAMICETD3D_SUBPROJECT  "Build targets from subproject dynamicEDT3D" ON)
 option(OCTOVIS_QT5 "Link Octovis against Qt5?" NO)
 
@@ -13,7 +13,7 @@ if(OCTOVIS_QT5)
 	set(CMAKE_CXX_STANDARD 11)
 endif(OCTOVIS_QT5)
 
-ADD_SUBDIRECTORY( octomap )
+ADD_SUBDIRECTORY(octomap)
 
 if(BUILD_OCTOVIS_SUBPROJECT)
 	ADD_SUBDIRECTORY( octovis )
