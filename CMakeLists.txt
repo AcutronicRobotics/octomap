@@ -1,4 +1,4 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.8)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 PROJECT( octomap-distribution )
 
 ENABLE_TESTING()  # enable CTest environment of subprojects
@@ -17,10 +17,8 @@ ADD_SUBDIRECTORY( octomap )
 
 if(BUILD_OCTOVIS_SUBPROJECT)
 	ADD_SUBDIRECTORY( octovis )
-endif()		
+endif()
 
-if(BUILD_DYNAMICETD3D_SUBPROJECT)	
+if(BUILD_DYNAMICETD3D_SUBPROJECT)
 	ADD_SUBDIRECTORY( dynamicEDT3D )
-endif()		
-
-
+endif()
